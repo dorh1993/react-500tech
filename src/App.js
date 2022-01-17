@@ -11,39 +11,46 @@ const Trailer = ({ data }) => (
   </a>
 );
 
-const PokemonName = ({ data }) => <span style={{ textTransform: 'capitalize' }}>{data}</span>;
+const PokemonName = ({ data }) => 
+{ console.log(data);
+  return (
+<span style={{ textTransform: 'capitalize' }}> {data}</span>
+)}
 
 const moviesConfig = [
   {
     title: 'id',
-    accessor: 'imdbID'
+    field: 'imdbID'
   },
   {
     title: 'title',
-    accessor: 'Title'
+    field: 'Title'
   },
   {
     title: 'rating',
-    accessor: 'imdbRating',
+    field: 'imdbRating',
   },
-//   {
-//    title: 'trailer',
-//    accessor: 'Trailer',
-//   //  component: Trailer
-//  }
+  {
+   title: 'trailer',
+   field: 'Trailer',
+   component: Trailer
+ }
 ];
 
 const pokemonConfig = [
   {
     title: 'pokedex #',
-    accessor: 'number'
+    field: 'number'
   },
   {
     title: 'name',
-    accessor: 'name',
-    // component: PokemonName
+    field: 'name',
+    component: PokemonName
   },
 ];
+
+
+
 
 const App = () => (
   <div>
