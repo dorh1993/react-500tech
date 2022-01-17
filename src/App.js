@@ -11,11 +11,8 @@ const Trailer = ({ data }) => (
   </a>
 );
 
-const PokemonName = ({ data }) => 
-{ console.log(data);
-  return (
-<span style={{ textTransform: 'capitalize' }}> {data}</span>
-)}
+const PokemonName = ({ data }) => <span style={{ textTransform: 'capitalize' }}> {data} </span>
+
 
 const moviesConfig = [
   {
