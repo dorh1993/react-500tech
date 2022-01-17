@@ -5,6 +5,7 @@ import { useTable } from 'react-table'
 export const Grid = ({ tableConfig, tableData }) => {
 
   const columns = useMemo(() => tableConfig.map((item, inx) => {
+    // in case there is a component field in the object, the cell should be custom
     if (item.hasOwnProperty('component')) {
       return {
         Header: item.title, accessor: item.field, Cell: props => {
